@@ -1,0 +1,7 @@
+Mi primera web, desde 0 solo con html, css y javascript. Estoy aprendiendo React como framework, es necesario. 
+
+Tambien estoy aprendiendo MySQL y mongoDB con node.js para manejar mis bases de datos :)
+
+"No dejaré de aprender" Eliasib Cantor
+
+10/07/2023

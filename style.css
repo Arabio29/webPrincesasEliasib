@@ -1,0 +1,859 @@
+/*Mi primera web, desde 0 solo con html, css y javascript. Estoy aprendiendo React como framework, es necesario. 
+Tambien estoy aprendiendo MySQL y mongoDB con node.js para manejar mis bases de datos :)
+10/07/2023 "No dejaré de aprender nunca" Eliasib Cantor*/
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto',sans-serif;
+    margin: 0;
+    
+}
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.2em;}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0,0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0,0.5);
+    color:white;
+    background-color: blueviolet;
+}
+
+.color-acento{color: rgb(102, 31, 169);}
+
+
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+.nombre-nav{
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: rgb(97, 17, 172);
+}
+
+a{
+    text-decoration: none;
+    color: blueviolet;
+}
+header{
+    display: flex;
+    min-height: 70;
+    background-color: rgb(245, 245, 245);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Aplica una sombra mínima */
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 25px 30px;
+    margin: 0;
+    color: blueviolet;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img{
+    height: 90px;
+    margin-right: 10px;
+}
+
+header nav{
+    display: flex;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+nav a{
+    font-weight: 560;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: #4b0a6e;
+}
+
+nav button:hover{
+    color: #000000;
+}
+
+#registrarmee {
+    padding: 10px 20px !important; /* Espaciado interno del botón */
+    font-size: 16px !important; /* Tamaño de fuente del botón */
+    background-color: transparent !important; /* Fondo transparente */
+    border: 2px solid blueviolet !important; /* Borde sólido */
+    border-radius: 5px !important; /* Borde redondeado */
+    cursor: pointer !important; /* Cambia el cursor al pasar por encima del botón */
+    transition: border-color 0.3s ease;
+    color: blueviolet !important;
+    
+  }
+
+  
+
+#inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/todos.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+@keyframes animacion-boton {
+    0% { transform: scale(0.8); }
+    50% { transform: scale(1); }
+    100% { transform: scale(0.8); }
+  }
+  
+  #inicio button {
+    animation: animacion-boton 2s infinite; /* Aplica la animación a los botones con la clase "boton-animado" */
+  }
+  
+
+#la-fundacion .container{
+    text-align: center;
+    padding: 200px  12px;
+
+}
+
+#sobre-nosotros{
+    background-color: #6f1abd;
+    color: white;
+    text-align: center;
+}
+
+#sobre-nosotros .container{
+   
+    padding: 40px;
+
+}
+ 
+#sobre-nosotros h2{
+    margin: 0px;
+    margin-bottom: 80px;
+    font-size: 3.2em;
+    padding: 0px;
+    
+}
+
+#sobre-nosotros .carta{
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: 100% 100%;
+    padding: 40px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/misionn.jpg");
+    
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/visionn.jpg");
+    
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    )
+    ,url("img/fondo13.jpg");
+   
+}
+
+#que-hacemos{
+    text-align: center;
+    color: white;
+    margin-bottom: 320px;
+}
+
+#que-hacemos .container {
+    
+    flex-wrap: wrap;
+    display: flex;
+  
+  }
+
+#que-hacemos .hacemos {
+padding-bottom: 0;
+margin-bottom: 0;
+  }
+
+
+
+#que-hacemos .color-negro{
+    color: #6f1abd;
+}
+
+.color-negro {
+    justify-content: center;
+    align-items: flex-start;
+    height: 225px; /* Ajusta la altura según tus necesidades */
+    margin-bottom: 80px !important;
+    
+  }
+
+  #que-hacemos .color-negro h2 {
+    margin-bottom: 16px !important; /* Elimina el margen inferior del h1 */
+  }
+
+ 
+.hacemos:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/proyectovida.jpg");
+    
+}
+
+.hacemos:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/danza.jpg");
+    
+}
+
+.hacemos:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/danza.jpg");
+    
+}
+
+.hacemos:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/liderazgo.jpg");
+   
+}
+
+.hacemos:nth-child(4){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/deporte.jpg");
+   
+}
+
+.hacemos:nth-child(5){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/lectura.jpg");
+   
+}
+
+.hacemos:nth-child(6){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/dibujo.jpg");
+   
+}
+
+.hacemos:nth-child(7){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/musica.jpg");
+   
+}
+
+.hacemos:nth-child(8){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/peinados.jpg");
+   
+}
+
+.hacemos:nth-child(9){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/bisuteria.jpg");
+   
+}
+
+.hacemos:nth-child(10){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/arte.jpg");
+   
+}
+
+.hacemos:nth-child(11){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/juntas.jpg");
+   
+}
+
+.hacemos:nth-child(12){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/recreacion.jpg");
+   
+}
+
+
+
+#participa{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background-color: #6f1abd;
+    color: white;
+    text-align: center;
+   
+}
+
+#participa h2{
+    padding-top: 20px;
+    font-size: 3.2em; 
+}
+
+#donaa .participa-boton p{
+    white-space: nowrap; /* Evitar el salto de línea */
+}
+
+#participa h3{
+    font-size: 24px;
+}
+
+#participa .participa-boton{
+    padding-bottom: 10px;
+    margin-bottom: 70px;
+    margin-top: 40px;
+}
+
+#donaa{
+    color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+}
+
+#donaa .titulo-dona h2{
+    color: blueviolet;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.carta3{
+    background-position: center center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+#donaa .container{
+    text-align: center;
+    padding: 30px  12px;
+
+}
+
+#donaa h2{
+    margin-top: none;
+    font-size: 3.2em;
+}
+
+#donaa .carta3{
+    background-position: center center;
+    background-size: cover;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    
+
+}
+
+#donaa .boton-donar{
+    padding-top: 40px;
+}
+
+.carta3:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/bancolombia.png");
+    
+}
+
+.carta3:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/nequi.png");
+    
+}
+
+.carta3:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/paypal.png");
+   
+}
+
+
+
+
+#contacto{
+    background-color: #6f1abd;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    color: white;
+
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(230, 230, 230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(89, 55, 104);
+}
+
+footer .container{
+    height: 150;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#contacto .wpmio{
+    margin-top: 60px;
+}
+
+.informacion-contacto{
+    margin-top: 20px;
+}
+
+.informacion-contacto ul {
+    list-style: none; /* Elimina los puntos de los li */
+    font-size: 18px; /* Ajusta el tamaño del texto */
+    
+  }
+  #contacto button{
+    animation: animacion-contacto 2s infinite; /* Agrega una animación en bucle */
+    margin-bottom: 50px;
+  }
+  
+  @keyframes animacion-contacto {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+/*mobile version*/
+
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 10px;
+    }
+
+#que-hacemos {
+    width: 100%;
+    height: 100%;
+
+}
+
+#que-hacemos p{
+    padding: 0px 30px 0px 30px;
+   
+}
+    #que-hacemos .container {
+        flex-direction: column;
+      }
+
+ #participa{
+    padding: 0px 20px 0px 20px;
+    height: 100%;
+    }
+        
+
+#que-hacemos .hacemos {
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: 100% 100%;
+    padding: 40px;
+      
+      }
+
+#contacto{
+    height: 100%;
+}
+  
+  
+  }
+    
+
+
+/*destokp version*/
+@media (min-width:720px){
+    
+    #header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+    
+    #que-hacemos{
+        padding-top: 60px;
+        scroll-margin-top: 60px; /* Ajusta el valor según el tamaño del encabezado */
+        
+        padding-left: 75px; /* Padding izquierdo de 20 píxeles */
+        padding-right: 75px; /* Padding derecho de 20 píxeles */
+          
+          
+       
+    }
+    
+    #que-hacemos .color-negro{
+        margin-bottom: 0px !important;
+        padding-left: 10px; /* Padding izquierdo de 20 píxeles */
+        padding-right: 10px; /* Padding derecho de 20 píxeles */     
+    }
+
+#que-hacemos .container {
+    flex-wrap: wrap;
+  }
+
+  #que-hacemos .hacemos {
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: 100% 100%;
+    padding: 40px;
+    
+  
+  }
+
+  #participa{
+    padding-top: 60px;
+    scroll-margin-top: 60px;
+  }
+
+  #participa .carta1{
+    padding: 20px 200px 20px 200px;
+  }
+  
+   
+   
+    header{
+      position: fixed;
+      width: 100%;  
+    }
+
+    header nav{
+        padding-right: 50px;
+        padding-bottom: 0;
+    }
+
+    nav a{
+        padding-left: 10px;
+    }
+
+    #la-fundacion .container{
+        display: flex;
+        justify-content: center;
+    }
+    #la-fundacion .texto{
+        width: 50%;
+        text-align: initial;
+        padding: 0px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    #la-fundacion .img-container{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.1),
+            rgba(0,0,0,0.1)
+
+        ), url(img/fondo12.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+    }
+    #sobre-nosotros .info{
+        display: flex;
+        justify-content: center;
+    }
+
+    #sobre-nosotros p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #sobre-nosotros .carta{
+        padding: 15px;
+    }
+
+    #sobre-nosotros h3{
+        margin-top: 0;
+    }
+
+    #sobre-nosotros h2{
+        font-size: 3.5em;
+    }
+
+    #donaa{
+        padding-top: 70px;
+        scroll-margin-top: 70px;
+    }
+
+#donaa .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .titulo-dona {
+    margin-bottom: 20px;
+  }
+  
+  .carta3-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  #donaa .carta3 {
+    flex: 1;
+    flex-grow: 1;
+    margin: 0 10px;
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: 100% 100%;
+    padding: 40px;
+  }
+  
+  .carta3 h3 {
+    margin-bottom: 5px;
+  }
+  
+  .boton-donar {
+    margin-top: 20px;
+  }
+  
+      
+
+
+    .area-contacto {
+        display: flex;
+        align-items: center;
+      }
+      
+      .informacion-contacto {
+        flex: 1;
+      }
+      
+      .informacion-contacto ul {
+        list-style: none; /* Elimina los puntos de los li */
+        font-size: 18px; /* Ajusta el tamaño del texto */
+        
+      }
+
+
+      
+      .imagen-contacto {
+        margin-left: 20px;
+      }
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+       
+
+
+    }
+
+
+      
+
+
+    
+    
+
+

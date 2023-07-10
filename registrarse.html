@@ -1,0 +1,61 @@
+<!--Mi primera web, desde 0 solo con html, css y javascript. Estoy aprendiendo React como framework, es necesario. 
+Tambien estoy aprendiendo MySQL y mongoDB con node.js para manejar mis bases de datos :)
+10/07/2023 "No dejaré de aprender nunca" Eliasib Cantor-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registrar.css">
+    <title>Registrate</title>
+</head>
+<body>
+
+    <header>
+        <a href="index.html#inicio" class="logo">
+             
+                <p class="nombre-nav">Fundación princesas Gerreras</p>      
+        </a>
+    <nav>
+        <a href="index.html#la-fundacion" class="nav-link">Sobre nosotros</a>
+        <a href="index.html#que-hacemos" class="nav-link">Que hacemos</a>
+        <a href="index.html#participa" class="nav-link">Como participar</a>
+        <a href="index.html#donaa" class="nav-link">Dona</a>
+        <a href="index.html#contacto" class="nav-link">contacto</a>
+        <a href="registrarse.html" class="nav-link" target="_blank"><button id="registrarmee">Registrarme</button></a>
+    </nav>
+</header>
+
+    <section id="registrarme">
+        <div class="container">
+            <h1>Registrate!</h1>
+                <form id="myForm">
+                    <input class="controls" type="text" name=nombre"" id="nombre" placeholder="Nombre" required>
+                    
+                    <input class="controls" type="text" name=apellido"" id="apellido" placeholder="Apellido" required>
+        
+                    <label for="date
+                    ">Fecha de nacimiento</label>
+                    <input class="controls" type="date" name="date" id="date" placeholder="Fecha de nacimiento" required>
+                    
+                    <input class="controls" type="number" name="documento" id="documento" placeholder="Documento" required>
+
+                    <input class="controls" type="number" name="celular" id="celular" placeholder="celular" required>
+
+                    <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+
+                    <input class="butons" type="submit" value="Registrarme">
+            </form>
+        </div>
+    </section>
+    <div class="img-conteiner"><img src=""></div>
+    <footer>
+        <div class="container">
+            <p>&copy; Eliasib Cantor - 2023</p>
+        </div>
+    </footer>
+</body>
+<script src="app.js"></script>
+</html>
